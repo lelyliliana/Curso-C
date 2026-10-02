@@ -1,0 +1,22 @@
+# Productos de compilacion; se conserva el codigo fuente.
+build/
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+*.dll
+*.dSYM/
+hola
+presentacion
+saltos
+tarjeta
+tabla
+
+# Archivos temporales del sistema/editor.
+.DS_Store
+Thumbs.db
+*~
+*.swp
