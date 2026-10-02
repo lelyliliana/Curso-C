@@ -270,4 +270,4 @@ Resuelve los [ejercicios de esta unidad](EJERCICIOS.md). Incluyen predicción de
 
 Conserva tus fuentes, tu resultado esperado y una nota breve sobre un error que resolviste. Una captura de salida no reemplaza al código necesario para reproducirla.
 
-El siguiente bloque incorporará variables, tipos y expresiones. Por ahora puedes repasar estos ejemplos hasta poder explicar cada línea sin consultar el texto.
+Cuando puedas explicar estos ejemplos sin consultar el texto, continúa con [Unidad 02 — Variables](../unidad02-variables/README.md).

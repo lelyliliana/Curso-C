@@ -12,8 +12,11 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 
 1. [Unidad 00 — Preparar el entorno](unidad00-entorno/README.md): identifica tus herramientas, instala el compilador y organiza tus archivos.
 2. [Unidad 01 — Tu primer programa](unidad01-primer-programa/README.md): escribe un programa, compílalo, ejecútalo y aprende a corregir errores iniciales.
+3. [Unidad 02 — Variables](unidad02-variables/README.md): almacena datos, muestra sus valores y sigue sus cambios.
+4. [Unidad 03 — Tipos de datos](unidad03-tipos/README.md): elige representaciones, consulta límites y reconoce pérdidas de información.
+5. [Unidad 04 — Expresiones](unidad04-expresiones/README.md): calcula, verifica unidades y construye un recibo en centavos.
 
-**Contenido publicado:** unidades 00 y 01, con ejemplos, ejercicios, soluciones y comprobaciones. El resto del recorrido se desarrollará por bloques completos; todavía no está disponible. No necesitas esperar al curso completo para comenzar estas dos unidades.
+**Contenido publicado:** unidades 00–04, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. La entrada validada, las decisiones y los ciclos serán el siguiente bloque; todavía no están publicados. El resto del recorrido se desarrollará por bloques completos.
 
 ## Cómo estudiar
 
@@ -62,7 +65,10 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 
 - [Unidad 00](unidad00-entorno/README.md): guía y tres recorridos de instalación.
 - [Unidad 01](unidad01-primer-programa/README.md): explicación, tres ejemplos y práctica gradual.
-- [Fuentes técnicas](docs/FUENTES.md): documentación oficial utilizada para las herramientas.
+- [Unidad 02](unidad02-variables/README.md): variables, copias, asignación y datos que no deben cambiar.
+- [Unidad 03](unidad03-tipos/README.md): tipos, formatos de salida, precisión, límites y conversiones.
+- [Unidad 04](unidad04-expresiones/README.md): operaciones, división, resto, unidades y pequeño proyecto.
+- [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 
 GitHub permite leer el material en el navegador. Para trabajar con los archivos, la Unidad 00 explica cómo obtener una copia sin requerir conocimientos previos de Git.
