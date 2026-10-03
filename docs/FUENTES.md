@@ -57,6 +57,14 @@ Las unidades 11–13 utilizan arreglos de capacidad fija y cadenas terminadas en
 
 La documentación de biblioteca actual incluye formatos y versiones más amplios que el contrato del curso. En las unidades 14–16 se mantiene C17, base diez explícita para enteros y una gramática decimal propia, con punto y configuración numérica C. El estado, el contenido restante y el dominio se verifican antes de escribir salidas. La capacidad declarada no certifica automáticamente la extensión real ni la duración de memoria proporcionada por el llamador.
 
+## Estructuras, estados y archivos
+
+- [WG14: borrador N1570 (PDF)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf): estructuras y enumeraciones (6.7.2), inicialización (6.7.9), flujos y archivos (7.21), apertura y cierre (7.21.5), salida formateada (7.21.6), lectura por caracteres (7.21.7) e indicadores de error (7.21.10).
+- [Linux man-pages: modos de apertura de `fopen`](https://man7.org/linux/man-pages/man3/fopen.3.html).
+- [Linux man-pages: comprobación de `fclose`](https://man7.org/linux/man-pages/man3/fclose.3.html).
+
+El modo `wx` crea un archivo nuevo con apertura exclusiva; no sustituye un archivo existente. Las unidades 17–19 distinguen copia de registros, códigos enumerados y validación de datos externos. El guardado comprueba escritura y cierre, pero no promete reemplazo atómico ni persistencia física frente a una pérdida de energía. La carga valida todo y comprueba el cierre antes de modificar las salidas.
+
 ## Editor e instalación
 
 - [Microsoft: C/C++ en Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp).

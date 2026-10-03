@@ -28,7 +28,11 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 16. [Unidad 15 — Interfaces](unidad15-interfaces/README.md): recibe arreglos y cadenas con cantidades, capacidades y salidas explícitas.
 17. [Unidad 16 — Líneas](unidad16-lineas/README.md): separa lectura y conversión de enteros y decimales completos.
 
-**Contenido publicado:** unidades 00–16, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará estructuras, enumeraciones y archivos para agrupar y conservar datos; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
+18. [Unidad 17 — Estructuras](unidad17-estructuras/README.md): agrupa datos en registros y valida copias completas.
+19. [Unidad 18 — Estados](unidad18-estados/README.md): utiliza enumeraciones y transiciones explícitas.
+20. [Unidad 19 — Archivos](unidad19-archivos/README.md): guarda y carga registros de texto con validación y control de errores.
+
+**Contenido publicado:** unidades 00–19, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará memoria dinámica, propiedad de recursos y depuración. El resto del recorrido se desarrollará por bloques completos.
 
 El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño. En la Unidad 16 se amplía a líneas y conversiones de enteros con signo y decimales, después de comprender funciones, arreglos, cadenas y punteros.
 
@@ -94,6 +98,9 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 - [Unidad 14](unidad14-punteros/README.md): direcciones, acceso por puntero, permisos, duración y salidas.
 - [Unidad 15](unidad15-interfaces/README.md): interfaces de arreglos/cadenas, capacidad, salidas intactas y pruebas compartidas.
 - [Unidad 16](unidad16-lineas/README.md): lector de líneas, conversión completa, rango, reintentos y colección de tres datos.
+- [Unidad 17](unidad17-estructuras/README.md): registros, copia por valor y validación con destino preservado.
+- [Unidad 18](unidad18-estados/README.md): enumeraciones, eventos, transiciones y rechazos sin cambio de estado.
+- [Unidad 19](unidad19-archivos/README.md): archivos nuevos, formato versionado y carga completa antes de publicar resultados.
 - [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 

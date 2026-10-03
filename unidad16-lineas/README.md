@@ -210,4 +210,4 @@ Los pasos de construcción y los resultados están en [SOLUCIONES.md](SOLUCIONES
 - [ ] Pruebo lectura y conversión por separado y también integradas.
 - [ ] Conservo resultados ante rechazo y no acepto una colección incompleta.
 
-Conserva casos de entero negativo, límite válido, sufijo inválido, línea larga y fin incompleto. El siguiente bloque estudiará estructuras, enumeraciones y archivos para agrupar y conservar datos; todavía no está publicado. La memoria dinámica tendrá su propia explicación y comprobaciones posteriores.
+Conserva casos de entero negativo, límite válido, sufijo inválido, línea larga y fin incompleto. Continúa con la [Unidad 17 — Estructuras](../unidad17-estructuras/README.md) para agrupar y validar registros; después trabajarás estados y archivos. La memoria dinámica tendrá su propia explicación y comprobaciones posteriores.

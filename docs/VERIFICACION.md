@@ -21,7 +21,10 @@ Registro actualizado: 3 de octubre de 2026. Los apartados conservan las comproba
 - Unidad 14: direcciones, punteros, paso por valor, nulidad, permisos, duración y salidas múltiples.
 - Unidad 15: parámetros de arreglos, aritmética dentro de límites, interfaces de colección y filtro sin cambios ante rechazo.
 - Unidad 16: lectura compartida por líneas, sintaxis, conversión de enteros y decimales, reintentos y colección completa.
-- 96 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10, 19 programas de las unidades 11–13 y 18 objetivos de las unidades 14–16. El material contiene 101 fuentes `.c` y cinco encabezados `.h`; varios fuentes de módulos se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
+- Unidad 17: estructuras, copia por valor, nombres acotados y validación de registros.
+- Unidad 18: enumeraciones, eventos y transiciones con conservación del estado ante rechazo.
+- Unidad 19: archivos de texto versionados, creación exclusiva y carga completa con errores separados.
+- 110 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10, 19 programas de las unidades 11–13 18 objetivos de las unidades 14–16 y 14 de las unidades 17–19. El material contiene 118 fuentes `.c` y ocho encabezados `.h`; varios fuentes de módulos se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
 
 No hay unidades futuras vacías ni enlaces que presenten contenido previsto como si ya estuviera disponible.
 
@@ -153,9 +156,29 @@ Se comprobaron siete fallos intencionales de construcción: tres programas de pr
 
 La inyección de error parcial utiliza flujos de prueba de GNU mediante `fopencookie`, únicamente fuera del material del curso y en Ubuntu. El código publicado mantiene las interfaces de C17. Las llamadas de biblioteca cargadas para pruebas directas conservan los objetos de sus argumentos durante cada llamada.
 
+### Unidades 17–19
+
+Se construyeron 14 ejecutables con 17 nuevos fuentes `.c` y tres encabezados, reutilizando los módulos publicados de registros y entrada. Todos compilaron sin diagnósticos con las opciones estrictas indicadas.
+
+| Comprobación | Resultado |
+|---|---|
+| Programas y controladores | 20 comprobaciones de salida, argumentos, conteo de saltos y archivos existentes |
+| Registros | 47 comprobaciones de nombres, valores, nulidad y terminación acotada |
+| Transiciones | 36 combinaciones de estados y eventos, incluyendo códigos ajenos y puntero nulo |
+| Carga válida | 162 comprobaciones de colecciones, extremos, nombres y última línea sin salto |
+| Carga rechazada | 212 comprobaciones de formato, bytes, capacidad, argumentos y apertura; salidas preservadas |
+| Guardado | Nueve comprobaciones de contenido, creación exclusiva y rechazo antes de crear |
+| Errores de entrada/salida | Cuatro fallos inyectados: escritura, cierre al guardar, lectura parcial y cierre al cargar |
+| Instrumentación | 15 ejecuciones con `-fsanitize=undefined,bounds -fno-sanitize-recover=all`, sin diagnósticos |
+| Construcción rechazada | Los tres programas de pruebas rechazan `NDEBUG` |
+
+Los resultados de archivos se contrastaron con un formato esperado independiente. Se probaron los 256 valores de byte dentro de nombres: los admitidos cumplen la lista explícita y los restantes se rechazan. Los fallos de entrada/salida se inyectaron mediante flujos GNU de prueba fuera del curso, en Ubuntu, sobre la implementación publicada; no constituyen pruebas de todos los dispositivos. La instrumentación cubre todos los nuevos objetivos y una ejecución adicional con los cuatro fallos, no todas las combinaciones posibles de archivos.
+
+El guardado no sobrescribe archivos existentes y puede dejar un archivo nuevo parcial si falla escritura o cierre. La carga conserva registros y cantidad utilizados ante cualquier fallo comprobado. No se afirma atomicidad del guardado, persistencia frente a corte eléctrico ni ejecución en Windows/macOS.
+
 ## Comprobaciones de documentación
 
-- Se comprobaron 336 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 14–16. Los bloques anteriores registraban 263 al terminar 11–13 y 205 al terminar 08–10.
+- Se comprobaron 385 enlaces internos al terminar las unidades 17–19. Se habían comprobado 336 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 14–16. Los bloques anteriores registraban 263 al terminar 11–13 y 205 al terminar 08–10.
 - Las guías explican el lugar de ejecución de cada comando y separan instalar, escribir, compilar y ejecutar.
 - Las soluciones utilizan únicamente conceptos introducidos en el bloque.
 - Se conserva la diferencia entre salida correcta, compilación exitosa y finalización exitosa.
