@@ -24,7 +24,10 @@ Registro actualizado: 3 de octubre de 2026. Los apartados conservan las comproba
 - Unidad 17: estructuras, copia por valor, nombres acotados y validación de registros.
 - Unidad 18: enumeraciones, eventos y transiciones con conservación del estado ante rechazo.
 - Unidad 19: archivos de texto versionados, creación exclusiva y carga completa con errores separados.
-- 110 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10, 19 programas de las unidades 11–13 18 objetivos de las unidades 14–16 y 14 de las unidades 17–19. El material contiene 118 fuentes `.c` y ocho encabezados `.h`; varios fuentes de módulos se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
+- Unidad 20: reserva, inicialización, crecimiento con límite y liberación de números.
+- Unidad 21: préstamos, clonación independiente, transferencia e importación con temporal.
+- Unidad 22: defecto lógico intencional, corrección, regresión e informe de media con recursos.
+- 124 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10, 19 programas de las unidades 11–13 18 objetivos de las unidades 14–16 14 de las unidades 17–19 y 14 de las unidades 20–22. El material contiene 135 fuentes `.c` y once encabezados `.h`; varios fuentes de módulos se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
 
 No hay unidades futuras vacías ni enlaces que presenten contenido previsto como si ya estuviera disponible.
 
@@ -176,9 +179,34 @@ Los resultados de archivos se contrastaron con un formato esperado independiente
 
 El guardado no sobrescribe archivos existentes y puede dejar un archivo nuevo parcial si falla escritura o cierre. La carga conserva registros y cantidad utilizados ante cualquier fallo comprobado. No se afirma atomicidad del guardado, persistencia frente a corte eléctrico ni ejecución en Windows/macOS.
 
+### Unidades 20–22
+
+Se construyeron 14 ejecutables a partir de 17 nuevos fuentes `.c` y tres encabezados, con las opciones estrictas documentadas. Incluyen dos construcciones del mismo controlador de media: una con el defecto lógico expresamente identificado y otra con la implementación correcta. Ambas compilan sin diagnósticos; la salida incorrecta de la primera se conserva como caso de aprendizaje, no como aprobación de la fórmula.
+
+| Comprobación | Resultado |
+|---|---|
+| Salidas fijas | 12 comprobaciones completas de salida y estado de finalización |
+| Colección por entrada | 100 casos, incluyendo vacío, extremos, sintaxis excluida, líneas largas y fin anticipado |
+| Números dinámicos | 6770 comprobaciones de crecimiento, reserva, rechazo, datos preservados y liberación |
+| Catálogo | 491 comprobaciones de registros, límites, independencia, autocopia, transferencia y fuente interna al crecer |
+| Importación | 37 comprobaciones de archivos válidos, truncados, versión ajena, datos inválidos, argumentos y conservación del destino |
+| Media | 343 comprobaciones contra sumas independientes, dominio, vacío y salidas preservadas; incluye detección del defecto publicado |
+| Asignación fallida | Siete fallos simulados en módulos: primeras reservas, crecimiento, clonación y dos puntos de importación |
+| Limpieza de aplicaciones | Nueve rutas con asignación fallida en los controladores de catálogo, entrada, importación e informe |
+| Instrumentación | 20 ejecuciones con AddressSanitizer y UndefinedBehaviorSanitizer, sin diagnósticos de acceso o comportamiento indefinido |
+| Construcción rechazada | Tres pruebas con `NDEBUG` y enlace con las dos implementaciones de media |
+
+Las pruebas directas cargan los módulos publicados y mantienen vivos sus argumentos. Los resultados numéricos se contrastan con colecciones y sumas independientes. Las pruebas de crecimiento no comparan punteros anteriores tras un `realloc` exitoso; solo comparan el propietario previo cuando la operación debe conservarlo sin reasignar.
+
+Para simular falta de memoria, fuentes externos de ensayo redirigen únicamente las llamadas de asignación de los módulos publicados a un asignador de prueba. Este registra cada bloque, hace fallar una llamada pequeña elegida y fuerza a mover el contenido al crecer. Así se comprueba la copia del argumento interno antes del movimiento y la ausencia de bloques pendientes en las rutas ensayadas. No se modifica el asignador de todo el proceso, no se publican esas adaptaciones y no se intenta agotar la memoria del equipo.
+
+La instrumentación se ejecutó con `-fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer`. Se utilizó además `-no-pie` en las construcciones de ensayo de Ubuntu. El entorno impidió la inspección de procesos requerida por LeakSanitizer; su ejecución inicial terminó con un error de infraestructura. Las ejecuciones finales desactivaron esa detección con `ASAN_OPTIONS=detect_leaks=0:halt_on_error=1`. **No se afirma una verificación de fugas con LeakSanitizer**: la comprobación de liberación de los fallos simulados proviene del registro explícito de bloques del ensayo.
+
+Las 20 ejecuciones instrumentadas incluyen los 14 objetivos, cuatro rutas adicionales de entrada/importación y dos ensayos de fallos. No instrumentan todas las combinaciones de las pruebas directas. GDB y Valgrind no estaban disponibles; no se instalaron ni se presenta una sesión interactiva como ejecutada. Las instrucciones para Windows y macOS continúan pendientes de ejecución en esos sistemas.
+
 ## Comprobaciones de documentación
 
-- Se comprobaron 385 enlaces internos al terminar las unidades 17–19. Se habían comprobado 336 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 14–16. Los bloques anteriores registraban 263 al terminar 11–13 y 205 al terminar 08–10.
+- Se comprobaron 449 enlaces internos al terminar las unidades 20–22. Se habían comprobado 385 al terminar las unidades 17–19. Se habían comprobado 336 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 14–16. Los bloques anteriores registraban 263 al terminar 11–13 y 205 al terminar 08–10.
 - Las guías explican el lugar de ejecución de cada comando y separan instalar, escribir, compilar y ejecutar.
 - Las soluciones utilizan únicamente conceptos introducidos en el bloque.
 - Se conserva la diferencia entre salida correcta, compilación exitosa y finalización exitosa.
@@ -201,7 +229,7 @@ Los arreglos de las unidades 11–13 tienen capacidad fija; la cantidad utilizad
 
 El lector de etiquetas admite solamente la lista documentada de símbolos de un byte y reserva un elemento para el terminador. Rechaza líneas demasiado largas en lugar de aceptar un prefijo. No normaliza Unicode ni impone un límite temporal al consumo; un flujo abierto sin final puede mantenerlo esperando. Los errores de entrada estándar se inyectaron en Ubuntu al inicio de la lectura: no se afirma haber ensayado todas las fallas posibles durante una lectura parcial ni la traducción de CRLF de Windows.
 
-Los punteros publicados provienen de objetos vivos o de `NULL` comprobado antes del acceso. No se ejecutan accesos a locales destruidos, direcciones inventadas ni límites posteriores desreferenciados. No se introducen todavía memoria dinámica, matrices o concurrencia. Los contratos de copia y filtro excluyen regiones solapadas y salidas que invadan los datos leídos.
+Los punteros publicados provienen de objetos vivos o de `NULL` comprobado antes del acceso. No se ejecutan accesos a locales destruidos, direcciones inventadas ni límites posteriores desreferenciados. Las unidades 20–21 introducen memoria dinámica con propiedad exclusiva y límites explícitos; no se incluyen matrices ni concurrencia. Los contratos de copia y filtro excluyen regiones solapadas y salidas que invadan los datos leídos.
 
 El lector de líneas de la Unidad 16 llena un destino con capacidad real y devuelve estados separados. El límite de 32 bytes pertenece a los controladores; el módulo permite otras capacidades válidas. Sus conversiones se ejecutan bajo configuración numérica C y rechazan sufijos, sintaxis excluida, dominios inválidos y `ERANGE`. Un valor decimal aproximado y su presentación redondeada no se consideran una representación monetaria exacta.
 

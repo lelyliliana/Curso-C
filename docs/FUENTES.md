@@ -65,6 +65,15 @@ La documentación de biblioteca actual incluye formatos y versiones más amplios
 
 El modo `wx` crea un archivo nuevo con apertura exclusiva; no sustituye un archivo existente. Las unidades 17–19 distinguen copia de registros, códigos enumerados y validación de datos externos. El guardado comprueba escritura y cierre, pero no promete reemplazo atómico ni persistencia física frente a una pérdida de energía. La carga valida todo y comprueba el cierre antes de modificar las salidas.
 
+## Memoria dinámica y depuración
+
+- [WG14: borrador N1570 (PDF)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf): duración de objetos (6.2.4), tamaños máximos (7.20.3), gestión de memoria y asignaciones de tamaño cero (7.22.3). Se consultan las reglas de `malloc`, `calloc`, `realloc` y `free` con la base C17 explícita del curso.
+- [Linux man-pages: asignación y liberación](https://man7.org/linux/man-pages/man3/malloc.3.html). La página también documenta POSIX, extensiones y versiones posteriores de C: no se trasladan al curso las garantías específicas de `errno` ni se utiliza `reallocarray` como función de C17.
+- [GDB: sesión de ejemplo oficial](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Sample-Session.html), como referencia de puntos de parada, avance, observación y pila de llamadas.
+- [GCC: instrumentación y sanitizadores](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html), con disponibilidad y límites dependientes del entorno.
+
+Las unidades 20–22 evitan asignaciones de tamaño cero, validan tamaños antes de multiplicar y distinguen propiedad de préstamo. Las herramientas de depuración complementan los contratos y las pruebas de resultados; no demuestran por sí solas corrección ni cubren todas las rutas. El recorrido de GDB se ofrece como práctica opcional, sin presentarlo como una sesión ejecutada en el entorno de verificación.
+
 ## Editor e instalación
 
 - [Microsoft: C/C++ en Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp).

@@ -27,12 +27,15 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 15. [Unidad 14 — Punteros](unidad14-punteros/README.md): relaciona objetos y direcciones, controla acceso, permisos y duración.
 16. [Unidad 15 — Interfaces](unidad15-interfaces/README.md): recibe arreglos y cadenas con cantidades, capacidades y salidas explícitas.
 17. [Unidad 16 — Líneas](unidad16-lineas/README.md): separa lectura y conversión de enteros y decimales completos.
-
 18. [Unidad 17 — Estructuras](unidad17-estructuras/README.md): agrupa datos en registros y valida copias completas.
 19. [Unidad 18 — Estados](unidad18-estados/README.md): utiliza enumeraciones y transiciones explícitas.
 20. [Unidad 19 — Archivos](unidad19-archivos/README.md): guarda y carga registros de texto con validación y control de errores.
 
-**Contenido publicado:** unidades 00–19, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará memoria dinámica, propiedad de recursos y depuración. El resto del recorrido se desarrollará por bloques completos.
+21. [Unidad 20 — Memoria dinámica](unidad20-memoria/README.md): reserva, inicializa, crece y libera colecciones.
+22. [Unidad 21 — Recursos](unidad21-recursos/README.md): distingue préstamos, copia independiente y transferencia de propiedad.
+23. [Unidad 22 — Depuración](unidad22-depuracion/README.md): reproduce un defecto, corrige su causa y conserva pruebas de regresión.
+
+**Contenido publicado:** unidades 00–22, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque desarrollará un proyecto integrador y sus decisiones de diseño. El resto del recorrido se desarrollará por bloques completos.
 
 El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño. En la Unidad 16 se amplía a líneas y conversiones de enteros con signo y decimales, después de comprender funciones, arreglos, cadenas y punteros.
 
@@ -101,6 +104,9 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 - [Unidad 17](unidad17-estructuras/README.md): registros, copia por valor y validación con destino preservado.
 - [Unidad 18](unidad18-estados/README.md): enumeraciones, eventos, transiciones y rechazos sin cambio de estado.
 - [Unidad 19](unidad19-archivos/README.md): archivos nuevos, formato versionado y carga completa antes de publicar resultados.
+- [Unidad 20](unidad20-memoria/README.md): memoria dinámica, crecimiento con destino preservado y colección recibida por líneas.
+- [Unidad 21](unidad21-recursos/README.md): préstamos, clonación, transferencia, importación completa y limpieza.
+- [Unidad 22](unidad22-depuracion/README.md): hipótesis, regresión, seguimiento con depurador y límites de los sanitizadores.
 - [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 

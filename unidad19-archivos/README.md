@@ -169,4 +169,4 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md) y consulta luego [SOLUCIONES.md](SOLUCIO
 - [ ] Conservo salidas ante carga rechazada y no publico datos parciales.
 - [ ] Distingo serialización de copia de almacenamiento interno.
 
-Conserva el archivo válido y uno malformado de prueba dentro de `build`, con sus resultados. El siguiente bloque estudiará memoria dinámica, propiedad de recursos y depuración; todavía no está publicado.
+Conserva el archivo válido y uno malformado de prueba dentro de `build`, con sus resultados. Continúa con la [Unidad 20 — Memoria dinámica](../unidad20-memoria/README.md); después administrarás propietarios y préstamos, y depurarás resultados.
