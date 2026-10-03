@@ -22,6 +22,15 @@ Apartados de N1570 útiles para consultar: 6.2.5 (tipos), 6.3.1.4 (conversión e
 
 El manual de GNU describe su implementación y extensiones. No convertimos sus tamaños habituales en garantías universales: los ejemplos consultan `sizeof`, `CHAR_BIT` y los límites de la plataforma. Se muestran solo formatos compatibles con la base C17 seleccionada.
 
+## Control y entrada
+
+- [GNU: operadores lógicos](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Logical-Operators.html).
+- [GNU: ciclo `while`](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/while-Statement.html).
+- [Linux man-pages: lectura con `getchar` y `fgetc`](https://man7.org/linux/man-pages/man3/fgetc.3.html).
+- [Linux man-pages: indicadores de fin y error](https://man7.org/linux/man-pages/man3/ferror.3.html).
+
+Para el lenguaje, N1570 incluye 6.5.13–6.5.14 (operadores lógicos), 6.8.4 (selección), 6.8.5 (iteración), 6.8.6 (saltos) y 7.18 (tipos lógicos). En entrada, los apartados 7.21.7 y 7.21.10 describen lectura e indicadores. La Unidad 07 utiliza un lector decimal propio con rango y sintaxis acotados, no una conversión general del estándar.
+
 ## Editor e instalación
 
 - [Microsoft: C/C++ en Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp).

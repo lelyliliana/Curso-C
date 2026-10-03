@@ -15,8 +15,13 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 3. [Unidad 02 — Variables](unidad02-variables/README.md): almacena datos, muestra sus valores y sigue sus cambios.
 4. [Unidad 03 — Tipos de datos](unidad03-tipos/README.md): elige representaciones, consulta límites y reconoce pérdidas de información.
 5. [Unidad 04 — Expresiones](unidad04-expresiones/README.md): calcula, verifica unidades y construye un recibo en centavos.
+6. [Unidad 05 — Decisiones](unidad05-decisiones/README.md): compara, combina condiciones y valida antes de calcular.
+7. [Unidad 06 — Ciclos](unidad06-ciclos/README.md): repite con contador, acumulador y final definido.
+8. [Unidad 07 — Entrada validada](unidad07-entrada/README.md): comprueba opciones y cantidades completas y gestiona reintentos.
 
-**Contenido publicado:** unidades 00–04, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. La entrada validada, las decisiones y los ciclos serán el siguiente bloque; todavía no están publicados. El resto del recorrido se desarrollará por bloques completos.
+**Contenido publicado:** unidades 00–07, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque desarrollará funciones y organización de programas pequeños; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
+
+El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño; el procesamiento general de líneas y números se ampliará al estudiar funciones, arreglos y cadenas.
 
 ## Cómo estudiar
 
@@ -68,6 +73,9 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 - [Unidad 02](unidad02-variables/README.md): variables, copias, asignación y datos que no deben cambiar.
 - [Unidad 03](unidad03-tipos/README.md): tipos, formatos de salida, precisión, límites y conversiones.
 - [Unidad 04](unidad04-expresiones/README.md): operaciones, división, resto, unidades y pequeño proyecto.
+- [Unidad 05](unidad05-decisiones/README.md): decisiones, lógica, validación, `switch` y práctica con fronteras.
+- [Unidad 06](unidad06-ciclos/README.md): `while`, `for`, `do-while`, acumulación y saltos.
+- [Unidad 07](unidad07-entrada/README.md): lectura gradual, línea completa, fin/error, cantidades acotadas y recibo interactivo.
 - [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 

@@ -211,4 +211,4 @@ Consulta el enunciado completo en [EJERCICIOS.md](EJERCICIOS.md). Intenta resolv
 - [ ] Verifico unidades, rango y divisor en los casos conocidos.
 - [ ] Construí el recibo y comprobé más de un caso.
 
-El siguiente bloque desarrollará entrada validada, decisiones y ciclos. Todavía no está publicado. Conserva tus fuentes, los casos que comprobaste y una explicación de la división que produce 2.00 aunque su destino sea `double`.
+Conserva tus fuentes, los casos que comprobaste y una explicación de la división que produce 2.00 aunque su destino sea `double`. Continúa con [Unidad 05 — Decisiones](../unidad05-decisiones/README.md); después aprenderás ciclos y entrada validada, en ese orden.
