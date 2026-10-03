@@ -24,10 +24,13 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 12. [Unidad 11 — Arreglos](unidad11-arreglos/README.md): organiza datos por posiciones, distingue capacidad y cantidad y comprueba espacio.
 13. [Unidad 12 — Recorridos](unidad12-recorridos/README.md): resume, busca, filtra e invierte colecciones con casos vacíos explícitos.
 14. [Unidad 13 — Cadenas](unidad13-cadenas/README.md): representa texto terminado, compara y recibe etiquetas con límites.
+15. [Unidad 14 — Punteros](unidad14-punteros/README.md): relaciona objetos y direcciones, controla acceso, permisos y duración.
+16. [Unidad 15 — Interfaces](unidad15-interfaces/README.md): recibe arreglos y cadenas con cantidades, capacidades y salidas explícitas.
+17. [Unidad 16 — Líneas](unidad16-lineas/README.md): separa lectura y conversión de enteros y decimales completos.
 
-**Contenido publicado:** unidades 00–13, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará direcciones, punteros, interfaces de arreglos y entrada por líneas con conversión numérica; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
+**Contenido publicado:** unidades 00–16, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará estructuras, enumeraciones y archivos para agrupar y conservar datos; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
 
-El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño; el procesamiento general de líneas y números se ampliará al estudiar funciones, arreglos y cadenas.
+El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño. En la Unidad 16 se amplía a líneas y conversiones de enteros con signo y decimales, después de comprender funciones, arreglos, cadenas y punteros.
 
 ## Cómo estudiar
 
@@ -70,7 +73,7 @@ Esta tabla orienta el diseño del curso. Solo las unidades del apartado **Empiez
 | 6. Trabajar con calidad | Depuración, pruebas, sanitizadores, Make y portabilidad | Detectar errores y demostrar que una corrección funciona |
 | 7. Integrar | Estructuras de datos y proyecto final | Entregar una aplicación con pruebas, documentación y límites conocidos |
 
-La entrada de datos se enseñará con validación. El curso no utilizará `gets`, `fflush(stdin)` ni trucos de pausa dependientes del sistema como solución general. Los punteros se introducirán con dibujos y ejemplos de duración de objetos antes de abordar estructuras dinámicas.
+La entrada de datos se enseñará con validación. El curso no utilizará `gets`, `fflush(stdin)` ni trucos de pausa dependientes del sistema como solución general. Los punteros se introducen con tablas de objetos, direcciones y ejemplos de duración antes de abordar memoria dinámica.
 
 ## Organización actual
 
@@ -88,6 +91,9 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 - [Unidad 11](unidad11-arreglos/README.md): arreglos fijos, índices, inicialización, capacidad, copia e inserción.
 - [Unidad 12](unidad12-recorridos/README.md): resúmenes, búsqueda, filtros, conteo, inversión e informe de visitas.
 - [Unidad 13](unidad13-cadenas/README.md): terminador, longitud, comparación, copia y lector de etiquetas acotadas.
+- [Unidad 14](unidad14-punteros/README.md): direcciones, acceso por puntero, permisos, duración y salidas.
+- [Unidad 15](unidad15-interfaces/README.md): interfaces de arreglos/cadenas, capacidad, salidas intactas y pruebas compartidas.
+- [Unidad 16](unidad16-lineas/README.md): lector de líneas, conversión completa, rango, reintentos y colección de tres datos.
 - [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 

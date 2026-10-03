@@ -49,6 +49,14 @@ En N1570, 6.5.2.2 describe llamadas; 6.7.6.3, declaradores de funciones; 6.9.1, 
 
 Las unidades 11–13 utilizan arreglos de capacidad fija y cadenas terminadas en objetos locales. El lector propio acepta una lista de símbolos y rechaza entradas completas fuera del contrato; no implementa Unicode ni sustituye un lector general por líneas. La longitud en bytes, el espacio reservado y la cantidad de registros utilizados se tratan por separado.
 
+## Punteros, interfaces y conversión completa
+
+- [WG14: borrador N1570 (PDF)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf): 6.2.4 (duración), 6.3.2.1 (conversión de arreglos), 6.5.2.2 (llamadas), 6.5.3.2 (dirección e indirección), 6.5.6 (aritmética de punteros), 6.7.3 (calificación), 6.7.6.3 (ajuste de parámetros), 7.5 (`errno`), 7.12.3.2 (`isfinite`), 7.22.1.3 (`strtod`) y 7.22.1.4 (`strtol`). La configuración numérica inicial se describe en 7.11.1.1.
+- [Linux man-pages: `strtol`](https://man7.org/linux/man-pages/man3/strtol.3.html).
+- [Linux man-pages: `strtod`](https://man7.org/linux/man-pages/man3/strtod.3.html).
+
+La documentación de biblioteca actual incluye formatos y versiones más amplios que el contrato del curso. En las unidades 14–16 se mantiene C17, base diez explícita para enteros y una gramática decimal propia, con punto y configuración numérica C. El estado, el contenido restante y el dominio se verifican antes de escribir salidas. La capacidad declarada no certifica automáticamente la extensión real ni la duración de memoria proporcionada por el llamador.
+
 ## Editor e instalación
 
 - [Microsoft: C/C++ en Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp).

@@ -18,7 +18,10 @@ Registro actualizado: 3 de octubre de 2026. Los apartados conservan las comproba
 - Unidad 11: arreglos fijos, índices, capacidad, cantidad utilizada, copia e inserción con límites.
 - Unidad 12: resumen, búsqueda lineal, filtro, conteo, inversión e informe con estados vacíos explícitos.
 - Unidad 13: cadenas terminadas, longitud en bytes, comparación, copia y entrada de etiquetas acotadas.
-- 78 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10 y 19 programas de las unidades 11–13. El material contiene 80 fuentes `.c` y dos encabezados `.h`; en la Unidad 10 algunos fuentes se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
+- Unidad 14: direcciones, punteros, paso por valor, nulidad, permisos, duración y salidas múltiples.
+- Unidad 15: parámetros de arreglos, aritmética dentro de límites, interfaces de colección y filtro sin cambios ante rechazo.
+- Unidad 16: lectura compartida por líneas, sintaxis, conversión de enteros y decimales, reintentos y colección completa.
+- 96 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10, 19 programas de las unidades 11–13 y 18 objetivos de las unidades 14–16. El material contiene 101 fuentes `.c` y cinco encabezados `.h`; varios fuentes de módulos se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
 
 No hay unidades futuras vacías ni enlaces que presenten contenido previsto como si ya estuviera disponible.
 
@@ -123,9 +126,36 @@ Se ejecutaron además 78 casos instrumentados con `-fsanitize=undefined,bounds -
 
 Los programas publicados de una solicitud atienden una sola línea. Las pruebas de consumo agregaron una observación de la siguiente línea únicamente en fuentes temporales de verificación; no convierten los ejemplos en menús ni modifican su interfaz pública. No se publican las variantes temporales ni ejecutables.
 
+### Unidades 14–16
+
+Se construyeron 18 ejecutables a partir de 21 nuevos fuentes `.c` y tres encabezados. Compilaron sin diagnósticos con C17 y las opciones estrictas documentadas. Las comprobaciones contrastaron los módulos compartidos y las aplicaciones completas; no se utilizaron copias alternativas de sus algoritmos como implementación probada.
+
+| Comprobación | Alcance y resultado |
+|---|---|
+| Ejemplos iniciales | 14 ejecuciones de salida fija o forma documentada; para `%p` se comprobó la estructura de salida, sin exigir una dirección concreta |
+| Funciones e interfaces | 11852 comprobaciones directas de resultados y conservación de salidas, incluyendo 10100 divisiones válidas contrastadas con cociente/resto independientes |
+| Entero interactivo | 435 entradas distintas: fronteras, signos, blancos permitidos, sufijos, bytes nulos, cada valor de byte en contexto y límite de línea |
+| Decimal interactivo | 552 entradas distintas: punto, signo, exponente, dominio, formatos excluidos y errores de rango |
+| Protocolo de línea | 267 entradas por seis capacidades (0, 1, 2, 13, 33 y 65), con dos lecturas por ejecución: 3204 estados y contenidos comprobados |
+| Reintentos | 10 secuencias: éxito inicial/posterior, tercer intento, agotamiento, fin y consumo completo de líneas largas o inválidas |
+| Colección | Ocho secuencias: tres datos válidos, ceros, último dato sin salto, invalidez e interrupción antes de completar |
+| Error de lectura inicial | Cuatro controladores terminan con fallo; un lector directo verifica dos respuestas de error con salida vacía |
+| Error después de contenido | Tres casos: prefijo válido, prefijo demasiado largo y byte nulo antes del error; ninguno se acepta como resultado parcial |
+| Argumentos del lector | Nulidad y capacidad cero se rechazan sin consumir la siguiente entrada; capacidad cero conserva el destino existente |
+
+Las interfaces de colección se comprobaron con datos vacíos, un dato, todos iguales, ceros, extremos y muestras reproducibles. Se verificaron sumas, mínimos, copias y filtros con distintos umbrales y capacidades, incluidos destino nulo de capacidad cero para resultado vacío y salidas preservadas ante rechazo. El intercambio admite un mismo objeto; la división rechaza dos salidas iguales.
+
+En lectura se comprobaron cadenas de hasta 100000 bytes y que la siguiente línea comienza tras el rechazo completo. Las conversiones se contrastaron con un criterio independiente de sintaxis, valor y dominio. Se comprobó también que un `errno` de rango previo no contamina la siguiente conversión válida. En este entorno `CHAR_MAX` vale 127; el lector comprueba ese límite de la implementación antes de convertir un byte a `char`.
+
+Se realizaron 64 ejecuciones instrumentadas con `-fsanitize=undefined,bounds -fno-sanitize-recover=all`, sin diagnósticos. Incluyen todos los objetivos iniciales, fronteras de capacidad y lectura, reintentos, exponentes extremos y una ejecución adicional con los cinco casos de error parcial/argumentos. No son pruebas exhaustivas de toda memoria posible ni validan direcciones arbitrarias proporcionadas por terceros.
+
+Se comprobaron siete fallos intencionales de construcción: tres programas de pruebas con `NDEBUG`, implementación de entrada ausente, dos `main`, escritura mediante puntero a dato constante y reasignación de un puntero constante. Los fragmentos incorrectos no se ejecutaron ni se publicaron como ejemplos correctos.
+
+La inyección de error parcial utiliza flujos de prueba de GNU mediante `fopencookie`, únicamente fuera del material del curso y en Ubuntu. El código publicado mantiene las interfaces de C17. Las llamadas de biblioteca cargadas para pruebas directas conservan los objetos de sus argumentos durante cada llamada.
+
 ## Comprobaciones de documentación
 
-- Se comprobaron 263 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 11–13. Los bloques anteriores registraban 205 enlaces al terminar 08–10.
+- Se comprobaron 336 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 14–16. Los bloques anteriores registraban 263 al terminar 11–13 y 205 al terminar 08–10.
 - Las guías explican el lugar de ejecución de cada comando y separan instalar, escribir, compilar y ejecutar.
 - Las soluciones utilizan únicamente conceptos introducidos en el bloque.
 - Se conserva la diferencia entre salida correcta, compilación exitosa y finalización exitosa.
@@ -136,16 +166,20 @@ Los programas publicados de una solicitud atienden una sola línea. Las pruebas 
 
 La ejecución local se comprobó con GCC en Ubuntu. Los procedimientos de instalación en Windows y macOS se contrastaron con documentación oficial, pero **no se ejecutaron en equipos con esos sistemas**. No se presenta esa revisión documental como una prueba práctica de instalación ni de compilación con Apple Clang.
 
-El contenido utiliza programas de consola de escritorio, ahora con una primera entrada validada de alcance acotado. No incluye compilación para microcontroladores ni acceso a periféricos. Las restricciones de rango, sintaxis, longitud y divisor se explican en cada problema.
+El contenido utiliza programas de consola de escritorio, con entrada validada de alcance acotado y módulos compartidos. No incluye compilación para microcontroladores ni acceso a periféricos. Las restricciones de rango, sintaxis, longitud y divisor se explican en cada problema.
 
-El primer ejemplo de lectura inspecciona solo un byte y se identifica como introducción, no como validador de línea. Los demás lectores consumen hasta salto de línea o fin/error, pero no imponen un tiempo de espera ni un presupuesto total de bytes: una entrada abierta puede mantenerlos esperando. No son protocolos de red ni conversores numéricos generales.
+El primer ejemplo de lectura inspecciona solo un byte y se identifica como introducción, no como validador de línea. Los lectores de solicitudes completas consumen hasta salto de línea o fin/error, pero no imponen un tiempo de espera ni un presupuesto total de bytes: una entrada abierta puede mantenerlos esperando. No son protocolos de red; sus conversiones numéricas aplican las gramáticas y dominios del curso, no todos los formatos reconocidos por la biblioteca.
 
-La inyección de error se comprobó al comenzar la lectura en procesos de prueba de Ubuntu. No se afirma haber probado todas las posibles fallas de dispositivos, ni una terminal interactiva de Windows/macOS. La entrada numérica con signo, decimales y conversión general por líneas se desarrollará después de las interfaces de arreglos mediante punteros.
+La inyección de error se comprobó al comenzar la lectura en procesos de prueba de Ubuntu y, para la Unidad 16, después de prefijos mediante flujos simulados de GNU. No se afirma haber probado todas las posibles fallas de dispositivos, ni una terminal interactiva de Windows/macOS. La Unidad 16 desarrolla entrada por líneas y conversión con signo y decimales bajo un contrato explícito.
 
 Las funciones de cálculo admiten las precondiciones documentadas, no cualquier entero arbitrario. La interfaz de estados negativos del lector depende de que las cantidades válidas sean no negativas; no se presenta como una solución general para todas las lecturas. Las aserciones de cálculo no sustituyen las pruebas de lectura ni validan datos externos.
 
-Los arreglos de las unidades 11–13 tienen capacidad fija; la cantidad utilizada se controla de forma independiente. Sus cálculos usan dominios pequeños documentados. No incluyen matrices, tamaños variables ni asignación dinámica. Las funciones que reciben arreglos propios se introducirán al explicar punteros; las llamadas actuales a biblioteca utilizan cadenas locales válidas.
+Los arreglos de las unidades 11–13 tienen capacidad fija; la cantidad utilizada se controla de forma independiente. Sus cálculos usan dominios pequeños documentados. No incluyen matrices, tamaños variables ni asignación dinámica. Las interfaces de las unidades 15–16 reciben arreglos mediante punteros y requieren extensión real, duración y permisos de memoria correctos. Las comprobaciones de nulidad y cantidades no sustituyen esas precondiciones.
 
 El lector de etiquetas admite solamente la lista documentada de símbolos de un byte y reserva un elemento para el terminador. Rechaza líneas demasiado largas en lugar de aceptar un prefijo. No normaliza Unicode ni impone un límite temporal al consumo; un flujo abierto sin final puede mantenerlo esperando. Los errores de entrada estándar se inyectaron en Ubuntu al inicio de la lectura: no se afirma haber ensayado todas las fallas posibles durante una lectura parcial ni la traducción de CRLF de Windows.
+
+Los punteros publicados provienen de objetos vivos o de `NULL` comprobado antes del acceso. No se ejecutan accesos a locales destruidos, direcciones inventadas ni límites posteriores desreferenciados. No se introducen todavía memoria dinámica, matrices o concurrencia. Los contratos de copia y filtro excluyen regiones solapadas y salidas que invadan los datos leídos.
+
+El lector de líneas de la Unidad 16 llena un destino con capacidad real y devuelve estados separados. El límite de 32 bytes pertenece a los controladores; el módulo permite otras capacidades válidas. Sus conversiones se ejecutan bajo configuración numérica C y rechazan sufijos, sintaxis excluida, dominios inválidos y `ERANGE`. Un valor decimal aproximado y su presentación redondeada no se consideran una representación monetaria exacta.
 
 [Inicio del curso](../README.md) · [Fuentes](FUENTES.md).

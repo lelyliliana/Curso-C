@@ -1,6 +1,6 @@
 # Unidad 13 — Cadenas: texto con terminador y capacidad
 
-[Inicio](../README.md) · [Anterior: recorridos](../unidad12-recorridos/README.md)
+[Inicio](../README.md) · [Anterior: recorridos](../unidad12-recorridos/README.md) · [Siguiente: punteros](../unidad14-punteros/README.md)
 
 ## Objetivo
 
@@ -117,7 +117,7 @@ Las dos primeras son iguales.
 Mayuscula y minuscula son diferentes.
 ```
 
-Los argumentos sin índice, como `strlen(nombre)` o `strcmp(primera, segunda)`, permiten a estas funciones acceder al comienzo del texto. Eso **no copia el arreglo completo** como un argumento entero. Aquí utilizamos las funciones de biblioteca con cadenas locales válidas; en el siguiente bloque estudiaremos la conversión a puntero y cómo escribir nuestras propias interfaces con capacidad explícita.
+Los argumentos sin índice, como `strlen(nombre)` o `strcmp(primera, segunda)`, permiten a estas funciones acceder al comienzo del texto. Eso **no copia el arreglo completo** como un argumento entero. Aquí utilizamos las funciones de biblioteca con cadenas locales válidas; en las [unidades 14–15](../unidad14-punteros/README.md) estudiarás la conversión a puntero y cómo escribir nuestras propias interfaces con capacidad explícita.
 
 ## 5. Recibir una etiqueta sin perder los límites
 
@@ -235,4 +235,4 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md) y consulta luego [SOLUCIONES.md](SOLUCIO
 - [ ] Rechazo toda la entrada demasiado larga o inválida y no publico un prefijo.
 - [ ] Distingo fin normal, solicitud vacía y error de lectura.
 
-Conserva una evidencia de longitud 12 aceptada y 13 rechazada. El siguiente bloque estudiará direcciones, punteros y funciones que reciben arreglos con límites explícitos; todavía no está publicado.
+Conserva una evidencia de longitud 12 aceptada y 13 rechazada. Continúa con la [Unidad 14: direcciones y punteros](../unidad14-punteros/README.md).

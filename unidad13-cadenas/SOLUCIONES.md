@@ -66,7 +66,7 @@ El algoritmo empieza suponiendo igualdad y busca una pareja que la contradiga. C
 
 Los fuentes de soluciones son programas completos y pueden compilarse de forma independiente. Conservan la misma lógica de lectura para practicar el procesamiento posterior. La función `simbolo_permitido` ya separa un cálculo que recibe un entero por valor.
 
-Extraer la lectura a una función que llene un arreglo del llamador requiere comprender acceso mediante punteros y capacidad explícita. Ese será el siguiente bloque. Esta repetición temporal no es una recomendación de mantener varios lectores divergentes en una aplicación real; al crear la interfaz compartida, las pruebas deberán verificar la misma implementación.
+Extraer la lectura a una función que llene un arreglo del llamador requiere comprender acceso mediante punteros y capacidad explícita. Esas interfaces se estudian en la [Unidad 15](../unidad15-interfaces/README.md); la [Unidad 16](../unidad16-lineas/README.md) utiliza un lector de líneas compartido con un contrato propio. Esta repetición temporal no es una recomendación de mantener varios lectores divergentes en una aplicación real; al crear la interfaz compartida, las pruebas deberán verificar la misma implementación.
 
 ## Evidencia de cierre
 
