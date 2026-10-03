@@ -18,8 +18,11 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 6. [Unidad 05 — Decisiones](unidad05-decisiones/README.md): compara, combina condiciones y valida antes de calcular.
 7. [Unidad 06 — Ciclos](unidad06-ciclos/README.md): repite con contador, acumulador y final definido.
 8. [Unidad 07 — Entrada validada](unidad07-entrada/README.md): comprueba opciones y cantidades completas y gestiona reintentos.
+9. [Unidad 08 — Funciones](unidad08-funciones/README.md): recibe argumentos, devuelve resultados y comprende las copias y el alcance.
+10. [Unidad 09 — Contratos](unidad09-contratos/README.md): separa lectura, cálculo y presentación y conserva los estados de entrada.
+11. [Unidad 10 — Organización](unidad10-organizacion/README.md): construye varios archivos y prueba una implementación compartida.
 
-**Contenido publicado:** unidades 00–07, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque desarrollará funciones y organización de programas pequeños; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
+**Contenido publicado:** unidades 00–10, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará arreglos, recorridos y cadenas con límites; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
 
 El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño; el procesamiento general de líneas y números se ampliará al estudiar funciones, arreglos y cadenas.
 
@@ -57,7 +60,7 @@ Esta tabla orienta el diseño del curso. Solo las unidades del apartado **Empiez
 | Etapa | Aprendizaje previsto | Evidencia de aprendizaje |
 |---|---|---|
 | 1. Primeros pasos | Entorno, compilación, salida, variables, tipos y expresiones | Explicar y modificar un programa pequeño |
-| 2. Resolver problemas | Entrada validada, decisiones, ciclos y funciones | Construir una calculadora y un menú con controles |
+| 2. Resolver problemas | Decisiones, ciclos, entrada validada, funciones, contratos y primeros módulos | Construir programas pequeños y probar sus cálculos |
 | 3. Organizar datos | Arreglos, recorridos, cadenas y límites | Procesar una colección sin salir de sus límites |
 | 4. Comprender memoria | Direcciones, punteros, duración de objetos y memoria dinámica | Dibujar y justificar el uso de memoria de un programa |
 | 5. Construir programas | Estructuras, enumeraciones, módulos, encabezados y archivos | Separar responsabilidades y guardar información |
@@ -76,6 +79,9 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 - [Unidad 05](unidad05-decisiones/README.md): decisiones, lógica, validación, `switch` y práctica con fronteras.
 - [Unidad 06](unidad06-ciclos/README.md): `while`, `for`, `do-while`, acumulación y saltos.
 - [Unidad 07](unidad07-entrada/README.md): lectura gradual, línea completa, fin/error, cantidades acotadas y recibo interactivo.
+- [Unidad 08](unidad08-funciones/README.md): funciones, parámetros por valor, resultados, ámbito y prototipos.
+- [Unidad 09](unidad09-contratos/README.md): contratos, estados nombrados, refactor del lector y recibo por funciones.
+- [Unidad 10](unidad10-organizacion/README.md): encabezados, fuentes, objetos, enlace y pruebas compartidas.
 - [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 

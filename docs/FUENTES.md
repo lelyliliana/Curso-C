@@ -31,6 +31,16 @@ El manual de GNU describe su implementación y extensiones. No convertimos sus t
 
 Para el lenguaje, N1570 incluye 6.5.13–6.5.14 (operadores lógicos), 6.8.4 (selección), 6.8.5 (iteración), 6.8.6 (saltos) y 7.18 (tipos lógicos). En entrada, los apartados 7.21.7 y 7.21.10 describen lectura e indicadores. La Unidad 07 utiliza un lector decimal propio con rango y sintaxis acotados, no una conversión general del estándar.
 
+## Funciones y organización
+
+- [GNU: declaración de funciones y prototipos](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Function-Declarations.html).
+- [GNU: semántica de llamadas y paso por valor](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Function-Call-Semantics.html).
+- [GCC: etapas, objetos y enlace](https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html).
+- [GCC: guardas de inclusión](https://gcc.gnu.org/onlinedocs/cpp/Once-Only-Headers.html).
+- [Linux man-pages: `assert` y `NDEBUG`](https://man7.org/linux/man-pages/man3/assert.3.html).
+
+En N1570, 6.5.2.2 describe llamadas; 6.7.6.3, declaradores de funciones; 6.9.1, definiciones; 6.7.2.2, enumeraciones; 6.10, preprocesamiento; y 7.2, aserciones. Los estados nombrados de la Unidad 09 pertenecen al contrato de ese lector acotado; no son códigos universales de la biblioteca de C.
+
 ## Editor e instalación
 
 - [Microsoft: C/C++ en Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp).

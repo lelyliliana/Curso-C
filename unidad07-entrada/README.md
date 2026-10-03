@@ -203,4 +203,4 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md). Las [soluciones](SOLUCIONES.md) incluye
 - [ ] Verifico que un reintento recibe una línea nueva.
 - [ ] Puedo explicar las restricciones del lector y no lo llamo conversor general.
 
-El siguiente bloque desarrollará funciones y la organización de programas pequeños. Aún no está publicado. Antes de avanzar, conserva al menos un caso válido, uno inválido y uno de fin de entrada con sus resultados.
+Antes de avanzar, conserva al menos un caso válido, uno inválido y uno de fin de entrada con sus resultados. Continúa con [Unidad 08 — Funciones](../unidad08-funciones/README.md), donde empezaremos a separar responsabilidades y a reutilizar el lector.
