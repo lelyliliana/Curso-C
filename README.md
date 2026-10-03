@@ -35,7 +35,11 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 22. [Unidad 21 — Recursos](unidad21-recursos/README.md): distingue préstamos, copia independiente y transferencia de propiedad.
 23. [Unidad 22 — Depuración](unidad22-depuracion/README.md): reproduce un defecto, corrige su causa y conserva pruebas de regresión.
 
-**Contenido publicado:** unidades 00–22, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque desarrollará un proyecto integrador y sus decisiones de diseño. El resto del recorrido se desarrollará por bloques completos.
+24. [Unidad 23 — Diseño del proyecto](unidad23-diseno/README.md): define reglas y operaciones de una agenda de sensores.
+25. [Unidad 24 — Aplicación completa](unidad24-aplicacion/README.md): conecta menú, entrada validada y persistencia de hasta cien registros.
+26. [Unidad 25 — Construcción y entrega](unidad25-construccion/README.md): automatiza con GNU make y completa una entrega verificable.
+
+**Contenido publicado:** unidades 00–25, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Empieza por la Unidad 00 y avanza en orden. El recorrido introductorio ya tiene cierre: una agenda modular con interacción, memoria dinámica, persistencia, pruebas y guía de entrega. Los temas avanzados se distinguen de este alcance.
 
 El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño. En la Unidad 16 se amplía a líneas y conversiones de enteros con signo y decimales, después de comprender funciones, arreglos, cadenas y punteros.
 
@@ -66,9 +70,9 @@ C y C++ son lenguajes diferentes. Aquí compilamos C con `gcc` o `clang`, no con
 
 En los ejemplos iniciales el texto de salida usa caracteres ASCII para evitar que la codificación de una terminal distraiga del aprendizaje. Las explicaciones del curso están en español. Más adelante se estudiará el tratamiento de texto y sus límites.
 
-## Recorrido previsto
+## Recorrido del curso
 
-Esta tabla orienta el diseño del curso. Solo las unidades del apartado **Empieza aquí** tienen material publicado.
+Esta tabla resume el recorrido publicado y las evidencias que puedes construir.
 
 | Etapa | Aprendizaje previsto | Evidencia de aprendizaje |
 |---|---|---|
@@ -78,7 +82,7 @@ Esta tabla orienta el diseño del curso. Solo las unidades del apartado **Empiez
 | 4. Comprender memoria | Direcciones, punteros, duración de objetos y memoria dinámica | Dibujar y justificar el uso de memoria de un programa |
 | 5. Construir programas | Estructuras, enumeraciones, módulos, encabezados y archivos | Separar responsabilidades y guardar información |
 | 6. Trabajar con calidad | Depuración, pruebas, sanitizadores, Make y portabilidad | Detectar errores y demostrar que una corrección funciona |
-| 7. Integrar | Estructuras de datos y proyecto final | Entregar una aplicación con pruebas, documentación y límites conocidos |
+| 7. Integrar | Colecciones dinámicas y proyecto final | Entregar una aplicación con pruebas, documentación y límites conocidos |
 
 La entrada de datos se enseñará con validación. El curso no utilizará `gets`, `fflush(stdin)` ni trucos de pausa dependientes del sistema como solución general. Los punteros se introducen con tablas de objetos, direcciones y ejemplos de duración antes de abordar memoria dinámica.
 
@@ -107,6 +111,9 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 - [Unidad 20](unidad20-memoria/README.md): memoria dinámica, crecimiento con destino preservado y colección recibida por líneas.
 - [Unidad 21](unidad21-recursos/README.md): préstamos, clonación, transferencia, importación completa y limpieza.
 - [Unidad 22](unidad22-depuracion/README.md): hipótesis, regresión, seguimiento con depurador y límites de los sanitizadores.
+- [Unidad 23](unidad23-diseno/README.md): requisitos, unicidad, búsqueda, actualización, borrado y resumen.
+- [Unidad 24](unidad24-aplicacion/README.md): agenda interactiva, formato propio, carga completa y guardado exclusivo.
+- [Unidad 25](unidad25-construccion/README.md): GNU make, dependencias, limpieza y entrega con rúbrica.
 - [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 

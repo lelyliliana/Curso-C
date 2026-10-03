@@ -74,6 +74,15 @@ El modo `wx` crea un archivo nuevo con apertura exclusiva; no sustituye un archi
 
 Las unidades 20–22 evitan asignaciones de tamaño cero, validan tamaños antes de multiplicar y distinguen propiedad de préstamo. Las herramientas de depuración complementan los contratos y las pruebas de resultados; no demuestran por sí solas corrección ni cubren todas las rutas. El recorrido de GDB se ofrece como práctica opcional, sin presentarlo como una sesión ejecutada en el entorno de verificación.
 
+## Proyecto integrador y construcción
+
+- [GNU make: reglas y recetas](https://www.gnu.org/software/make/manual/html_node/Rule-Introduction.html).
+- [GNU make: objetivos de acciones](https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html).
+- [GNU make: dependencias automáticas](https://www.gnu.org/software/make/manual/html_node/Automatic-Prerequisites.html).
+- [GCC: opciones del preprocesador y dependencias](https://gcc.gnu.org/onlinedocs/gcc/Preprocessor-Options.html).
+
+Las unidades 23–25 reutilizan los módulos del curso y agregan requisitos explícitos de unicidad y persistencia para hasta cien registros. El formato nuevo no modifica el contrato de `C-REG-1`. El Makefile requiere GNU make y comandos del shell indicado; la verificación ejecutada corresponde a Ubuntu. La aplicación utiliza los mismos fuentes de las unidades 23–24, sin una segunda implementación para la etapa de construcción.
+
 ## Editor e instalación
 
 - [Microsoft: C/C++ en Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp).

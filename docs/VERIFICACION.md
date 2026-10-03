@@ -27,7 +27,10 @@ Registro actualizado: 3 de octubre de 2026. Los apartados conservan las comproba
 - Unidad 20: reserva, inicialización, crecimiento con límite y liberación de números.
 - Unidad 21: préstamos, clonación independiente, transferencia e importación con temporal.
 - Unidad 22: defecto lógico intencional, corrección, regresión e informe de media con recursos.
-- 124 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10, 19 programas de las unidades 11–13 18 objetivos de las unidades 14–16 14 de las unidades 17–19 y 14 de las unidades 20–22. El material contiene 135 fuentes `.c` y once encabezados `.h`; varios fuentes de módulos se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
+- Unidad 23: diseño de agenda con nombres únicos, búsqueda, actualización, borrado y resumen.
+- Unidad 24: menú, entrada validada y persistencia completa de hasta cien registros.
+- Unidad 25: GNU make, dependencias, construcción incremental y entrega evaluable.
+- 130 programas o variantes ejecutables: 43 de las unidades 01–07, 16 de 08–10, 19 de 11–13, 18 de 14–16, 14 de 17–19, 14 de 20–22 y seis de 23–24. El material contiene 143 fuentes `.c` y trece encabezados `.h`; los módulos se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
 
 No hay unidades futuras vacías ni enlaces que presenten contenido previsto como si ya estuviera disponible.
 
@@ -204,9 +207,34 @@ La instrumentación se ejecutó con `-fsanitize=address,undefined -fno-sanitize-
 
 Las 20 ejecuciones instrumentadas incluyen los 14 objetivos, cuatro rutas adicionales de entrada/importación y dos ensayos de fallos. No instrumentan todas las combinaciones de las pruebas directas. GDB y Valgrind no estaban disponibles; no se instalaron ni se presenta una sesión interactiva como ejecutada. Las instrucciones para Windows y macOS continúan pendientes de ejecución en esos sistemas.
 
+### Unidades 23–25
+
+Se construyeron seis nuevos ejecutables a partir de ocho fuentes `.c` y dos encabezados, enlazando los módulos compartidos publicados. Compilaron sin diagnósticos con C17, advertencias estrictas y `-Werror`. La Unidad 25 construye la misma aplicación y prueba de dominio mediante objetos; no se cuenta como otros dos programas con lógica diferente.
+
+| Comprobación | Resultado |
+|---|---|
+| Dominio | 8115 comprobaciones de operaciones, orden, unicidad, límites, resumen y conservación ante rechazo |
+| Archivos | 477 comprobaciones de formatos válidos/rechazados, ida y vuelta, límites 0/100, los 256 bytes dentro del nombre, argumentos y protección de archivos existentes |
+| Sesiones y controladores | 33 comprobaciones, incluyendo salidas completas de casos centrales, entrada inválida, fin anticipado, rutas con espacios, guardado y nueva carga |
+| Asignación fallida | Once casos: primera reserva, crecimiento, siete reservas de una carga de cien registros y dos rutas de sesión |
+| Fallos de entrada/salida | Cuatro casos: escritura, cierre al guardar, lectura parcial y cierre al cargar |
+| Instrumentación | Doce ejecuciones con AddressSanitizer y UndefinedBehaviorSanitizer, sin diagnósticos de acceso o comportamiento indefinido |
+| Construcción automática | Doce invocaciones correctas de GNU make: construcción, pruebas, ausencia de trabajo, cambios de encabezado, limpieza y sufijo `.exe` bajo Ubuntu |
+| Construcción rechazada | Los dos programas de pruebas rechazan `NDEBUG` |
+
+Las operaciones se contrastaron con listas independientes de nombres y valores, no con otra copia de las funciones C. Los archivos válidos se probaron con y sin salto final, cantidades 0, 1, 2, 3, 4, 10, 99 y 100, y muestras reproducibles. El guardado se contrastó con bytes esperados del formato nuevo y se comprobó que un segundo guardado no reemplaza el archivo. Los rechazos de carga conservaron puntero, cantidad, capacidad y registros anteriores.
+
+Los once fallos de asignación se inyectaron sobre el módulo de catálogo compartido y las funciones publicadas del proyecto. El asignador de ensayo fuerza movimiento y registra bloques; se comprobó que los temporales se liberan y que al terminar las rutas ensayadas no quedan bloques pendientes. Los cuatro fallos de entrada/salida utilizan flujos GNU de prueba, únicamente fuera del curso. También comprueban limpieza después de un cierre fallido. No se agota memoria real ni se publican adaptadores, archivos generados o binarios.
+
+Se ejecutaron doce procesos instrumentados: los seis objetivos, cuatro sesiones adicionales y dos ensayos de fallos. LeakSanitizer continúa desactivado por la restricción de inspección de procesos descrita para el bloque anterior. La comprobación de bloques pendientes se basa en el registro explícito de los ensayos, no en una afirmación de detección exhaustiva de fugas.
+
+GNU make se ensayó en una copia separada del proyecto. Se verificó que repetir la construcción sin cambios no ejecuta GCC; cambiar `sensor.h` reconstruye los siete objetos que lo incluyen directa o indirectamente, pero no el de entrada. La limpieza retira objetos, dependencias y ejecutables conocidos y conserva un archivo de datos. Se ensayó la opción `EXE=.exe` en Ubuntu; **eso no es una prueba de Windows**. Cambiar compilador/opciones exige limpiar: el Makefile no registra automáticamente esa configuración como una dependencia.
+
+Las pruebas de sesión comprueban rutas críticas y resultados concretos, no todas las secuencias interactivas posibles. El guardado no ofrece reemplazo atómico ni recuperación ante corte eléctrico. La aplicación requiere guardar explícitamente; la salida o el fin de entrada pueden descartar cambios no guardados. Se conserva el formato antiguo sin ampliarlo silenciosamente. No se ejecutaron compilaciones en Windows/macOS ni sesiones reales de hardware.
+
 ## Comprobaciones de documentación
 
-- Se comprobaron 449 enlaces internos al terminar las unidades 20–22. Se habían comprobado 385 al terminar las unidades 17–19. Se habían comprobado 336 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 14–16. Los bloques anteriores registraban 263 al terminar 11–13 y 205 al terminar 08–10.
+- Se comprobaron 510 enlaces internos al terminar las unidades 23–25. Se habían comprobado 449 al terminar las unidades 20–22. Se habían comprobado 385 al terminar las unidades 17–19. Se habían comprobado 336 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 14–16. Los bloques anteriores registraban 263 al terminar 11–13 y 205 al terminar 08–10.
 - Las guías explican el lugar de ejecución de cada comando y separan instalar, escribir, compilar y ejecutar.
 - Las soluciones utilizan únicamente conceptos introducidos en el bloque.
 - Se conserva la diferencia entre salida correcta, compilación exitosa y finalización exitosa.

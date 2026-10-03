@@ -1,6 +1,6 @@
 # Unidad 22 — Depurar con hipótesis y pruebas
 
-[Inicio](../README.md) · [Anterior: recursos](../unidad21-recursos/README.md)
+[Inicio](../README.md) · [Anterior: recursos](../unidad21-recursos/README.md) · [Siguiente: diseño](../unidad23-diseno/README.md)
 
 ## El problema que resolverás
 
@@ -119,4 +119,4 @@ Al depurar, conserva siempre estos datos: caso mínimo, resultado esperado, resu
 - [ ] Compruebo rechazos y conservación de salidas.
 - [ ] Distingo los límites de las pruebas y las herramientas.
 
-Con este bloque puedes construir colecciones dinámicas, administrar recursos y verificar resultados. El siguiente bloque desarrollará un proyecto integrador y sus decisiones de diseño; aún no se presenta como material publicado.
+Con este bloque puedes construir colecciones dinámicas, administrar recursos y verificar resultados. Continúa con la [Unidad 23 — Diseño del proyecto](../unidad23-diseno/README.md), seguida de aplicación completa y construcción reproducible.
