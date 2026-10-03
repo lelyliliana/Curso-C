@@ -21,8 +21,11 @@ No necesitas conocer C++, Arduino ni otro lenguaje. Necesitas saber crear una ca
 9. [Unidad 08 — Funciones](unidad08-funciones/README.md): recibe argumentos, devuelve resultados y comprende las copias y el alcance.
 10. [Unidad 09 — Contratos](unidad09-contratos/README.md): separa lectura, cálculo y presentación y conserva los estados de entrada.
 11. [Unidad 10 — Organización](unidad10-organizacion/README.md): construye varios archivos y prueba una implementación compartida.
+12. [Unidad 11 — Arreglos](unidad11-arreglos/README.md): organiza datos por posiciones, distingue capacidad y cantidad y comprueba espacio.
+13. [Unidad 12 — Recorridos](unidad12-recorridos/README.md): resume, busca, filtra e invierte colecciones con casos vacíos explícitos.
+14. [Unidad 13 — Cadenas](unidad13-cadenas/README.md): representa texto terminado, compara y recibe etiquetas con límites.
 
-**Contenido publicado:** unidades 00–10, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará arreglos, recorridos y cadenas con límites; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
+**Contenido publicado:** unidades 00–13, con explicaciones, ejemplos, ejercicios, soluciones y comprobaciones. Puedes comenzar sin esperar al curso completo. El siguiente bloque abordará direcciones, punteros, interfaces de arreglos y entrada por líneas con conversión numérica; todavía no está publicado. El resto del recorrido se desarrollará por bloques completos.
 
 El orden de las unidades 05–07 prepara primero decisiones y ciclos: así puedes comprender la validación y los reintentos antes de recibir datos. La primera entrada numérica tiene un contrato explícito y pequeño; el procesamiento general de líneas y números se ampliará al estudiar funciones, arreglos y cadenas.
 
@@ -82,6 +85,9 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 - [Unidad 08](unidad08-funciones/README.md): funciones, parámetros por valor, resultados, ámbito y prototipos.
 - [Unidad 09](unidad09-contratos/README.md): contratos, estados nombrados, refactor del lector y recibo por funciones.
 - [Unidad 10](unidad10-organizacion/README.md): encabezados, fuentes, objetos, enlace y pruebas compartidas.
+- [Unidad 11](unidad11-arreglos/README.md): arreglos fijos, índices, inicialización, capacidad, copia e inserción.
+- [Unidad 12](unidad12-recorridos/README.md): resúmenes, búsqueda, filtros, conteo, inversión e informe de visitas.
+- [Unidad 13](unidad13-cadenas/README.md): terminador, longitud, comparación, copia y lector de etiquetas acotadas.
 - [Fuentes técnicas](docs/FUENTES.md): referencias del lenguaje y documentación de las herramientas.
 - [Verificación](docs/VERIFICACION.md): comprobaciones realizadas y plataformas pendientes.
 

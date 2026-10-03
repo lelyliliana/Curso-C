@@ -1,6 +1,6 @@
 # Unidad 10 — Organizar un programa en varios archivos
 
-[Inicio](../README.md) · [Anterior: contratos](../unidad09-contratos/README.md)
+[Inicio](../README.md) · [Anterior: contratos](../unidad09-contratos/README.md) · [Siguiente: arreglos](../unidad11-arreglos/README.md)
 
 ## Objetivo
 
@@ -178,4 +178,4 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md); [SOLUCIONES.md](SOLUCIONES.md) incluye 
 - [ ] Reconstruyo lo necesario al cambiar un fuente o encabezado.
 - [ ] Conservo el comportamiento al organizar y actualizo contrato y pruebas al cambiar una regla.
 
-El siguiente bloque abordará arreglos, recorridos y cadenas con límites. Todavía no está publicado. Conserva el proyecto, los comandos que utilizaste y al menos una evidencia de diagnóstico de enlace.
+Continúa con la [Unidad 11: arreglos](../unidad11-arreglos/README.md). Conserva el proyecto, los comandos que utilizaste y al menos una evidencia de diagnóstico de enlace.

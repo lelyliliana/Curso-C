@@ -41,6 +41,14 @@ Para el lenguaje, N1570 incluye 6.5.13–6.5.14 (operadores lógicos), 6.8.4 (se
 
 En N1570, 6.5.2.2 describe llamadas; 6.7.6.3, declaradores de funciones; 6.9.1, definiciones; 6.7.2.2, enumeraciones; 6.10, preprocesamiento; y 7.2, aserciones. Los estados nombrados de la Unidad 09 pertenecen al contrato de ese lector acotado; no son códigos universales de la biblioteca de C.
 
+## Arreglos y cadenas
+
+- [WG14: borrador público N1570 (PDF)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf): 6.2.5 (tipos de arreglos), 6.5.2.1 (índices), 6.5.3.4 (`sizeof`), 6.7.6.2 (declaraciones), 6.7.9 (inicialización), 7.1.1 (cadenas), 7.24.4.2 (`strcmp`) y 7.24.6.3 (`strlen`). Las garantías del conjunto básico de caracteres se describen en 5.2.1.
+- [Linux man-pages: `strlen`](https://man7.org/linux/man-pages/man3/strlen.3.html).
+- [Linux man-pages: `strcmp`](https://man7.org/linux/man-pages/man3/strcmp.3.html).
+
+Las unidades 11–13 utilizan arreglos de capacidad fija y cadenas terminadas en objetos locales. El lector propio acepta una lista de símbolos y rechaza entradas completas fuera del contrato; no implementa Unicode ni sustituye un lector general por líneas. La longitud en bytes, el espacio reservado y la cantidad de registros utilizados se tratan por separado.
+
 ## Editor e instalación
 
 - [Microsoft: C/C++ en Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp).

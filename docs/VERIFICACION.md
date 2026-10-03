@@ -1,6 +1,6 @@
 # Verificación del contenido publicado
 
-Fecha: 2 de octubre de 2026.
+Registro actualizado: 3 de octubre de 2026. Los apartados conservan las comprobaciones acumuladas de los bloques anteriores.
 
 ## Alcance publicado
 
@@ -15,7 +15,10 @@ Fecha: 2 de octubre de 2026.
 - Unidad 08: funciones, resultados, parámetros por valor, alcance y prototipos.
 - Unidad 09: contratos, estados nombrados, extracción del lector, recibo por funciones y dos lecturas independientes.
 - Unidad 10: encabezados, guardas, objetos, enlace y pruebas con implementación compartida; variante de política de envío.
-- 59 programas o variantes ejecutables: los 43 de las unidades 01–07 y 16 objetivos de ejecución de las unidades 08–10. El material contiene 61 fuentes `.c` y dos encabezados `.h`; en la Unidad 10 algunos fuentes se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
+- Unidad 11: arreglos fijos, índices, capacidad, cantidad utilizada, copia e inserción con límites.
+- Unidad 12: resumen, búsqueda lineal, filtro, conteo, inversión e informe con estados vacíos explícitos.
+- Unidad 13: cadenas terminadas, longitud en bytes, comparación, copia y entrada de etiquetas acotadas.
+- 78 programas o variantes ejecutables: los 43 de las unidades 01–07, 16 objetivos de las unidades 08–10 y 19 programas de las unidades 11–13. El material contiene 80 fuentes `.c` y dos encabezados `.h`; en la Unidad 10 algunos fuentes se reutilizan entre ejecutables. Se conservan dos fuentes con errores intencionales de la Unidad 01 identificadas como `.c.txt`.
 
 No hay unidades futuras vacías ni enlaces que presenten contenido previsto como si ya estuviera disponible.
 
@@ -98,13 +101,36 @@ Los programas de pruebas del proyecto enlazan la misma implementación de cálcu
 
 También se comprobó que las pruebas de la política original detectan la implementación alternativa: fallan en la aserción de envío para cantidad 10. Se ejecutó como una prueba negativa controlada, sin producir volcado de memoria. Las pruebas específicas de la nueva regla pasan con su implementación correspondiente.
 
+### Unidades 11–13
+
+Los 19 nuevos programas compilaron sin diagnósticos con C17 y las opciones estrictas indicadas. Se efectuaron 4805 comprobaciones de salida completa, salida de errores y estado de finalización, incluidas 215 construcciones de variantes fuera del material del curso. Los resultados previstos se obtuvieron con criterios independientes: operaciones sobre colecciones, comparación de bytes y un contrato de sintaxis y longitud.
+
+| Grupo | Comprobación |
+|---|---|
+| Arreglos y capacidad | Valores iniciales, copia independiente, inserción desde vacío/parcial/lleno, cero como dato válido y propuestas rechazadas sin escribir fuera |
+| Recorridos | Vacío, un dato, ceros, valores iguales, datos repetidos, orden ascendente/descendente y muestras reproducibles; fronteras del dominio y cantidades que exceden capacidad |
+| Búsqueda y conteo | Primera coincidencia, coincidencia final, múltiples coincidencias, ausencia y valor cero |
+| Filtro | Conservación de todos/ninguno/algunos, orden de salida y rechazo de registros fuera del dominio |
+| Inversión | Cantidades pares/impares, cero/uno, y conservación del elemento fuera del segmento utilizado |
+| Cadenas inicializadas y copia | Capacidad frente a longitud, cambio desde texto vacío, longitud cinco en destino seis, longitud seis rechazada y copia vacía válida |
+| Tres lectores de etiquetas | 1507 entradas distintas por programa: 4521 ejecuciones contrastadas con un contrato independiente |
+| Consumo tras rechazo | 12 pruebas instrumentadas comprueban que la siguiente línea comienza después del rechazo, incluso ante longitud excesiva, byte nulo y líneas largas |
+| Error de lectura | Tres procesos con entrada estándar cerrada terminan con fallo y sin presentar resultados parciales |
+
+Las entradas de etiqueta cubren cada uno de los 256 valores de byte, solos y dentro de texto; los 64 símbolos permitidos en longitudes 1, 11, 12 y 13, con y sin salto final; espacios, tabulaciones, porcentajes, bytes nulos, texto UTF-8, líneas vacías, fin inmediato y líneas de 100000 bytes. Se incluyen palíndromos pares/impares y comparación exacta de mayúsculas. El resultado de cada lector se contrasta por separado: texto/longitud, conteo de dígitos o palíndromo.
+
+Se ejecutaron además 78 casos instrumentados con `-fsanitize=undefined,bounds -fno-sanitize-recover=all`, incluyendo los programas iniciales, entradas en fronteras y recorridos vacíos o con cantidad inválida. No hubo diagnósticos. Son comprobaciones adicionales sobre esos casos, no una demostración de ausencia de todos los defectos ni una prueba exhaustiva de memoria.
+
+Los programas publicados de una solicitud atienden una sola línea. Las pruebas de consumo agregaron una observación de la siguiente línea únicamente en fuentes temporales de verificación; no convierten los ejemplos en menús ni modifican su interfaz pública. No se publican las variantes temporales ni ejecutables.
+
 ## Comprobaciones de documentación
 
-- Se comprobaron 205 enlaces internos, incluidos sus destinos y anclas, antes de publicar este bloque.
+- Se comprobaron 263 enlaces internos, incluidos sus destinos y anclas, antes de publicar las unidades 11–13. Los bloques anteriores registraban 205 enlaces al terminar 08–10.
 - Las guías explican el lugar de ejecución de cada comando y separan instalar, escribir, compilar y ejecutar.
 - Las soluciones utilizan únicamente conceptos introducidos en el bloque.
 - Se conserva la diferencia entre salida correcta, compilación exitosa y finalización exitosa.
 - Se publican fuentes y documentación para estudiantes; se excluyen binarios y credenciales.
+- Se revisó el contenido para evitar marcadores pendientes e instrucciones internas ajenas al aprendizaje.
 
 ## Límites de esta verificación
 
@@ -114,8 +140,12 @@ El contenido utiliza programas de consola de escritorio, ahora con una primera e
 
 El primer ejemplo de lectura inspecciona solo un byte y se identifica como introducción, no como validador de línea. Los demás lectores consumen hasta salto de línea o fin/error, pero no imponen un tiempo de espera ni un presupuesto total de bytes: una entrada abierta puede mantenerlos esperando. No son protocolos de red ni conversores numéricos generales.
 
-La inyección de error se comprobó al comenzar la lectura en procesos de prueba de Ubuntu. No se afirma haber probado todas las posibles fallas de dispositivos, ni una terminal interactiva de Windows/macOS. La entrada numérica con signo, decimales y conversión general por líneas se desarrollará después de funciones, arreglos y cadenas.
+La inyección de error se comprobó al comenzar la lectura en procesos de prueba de Ubuntu. No se afirma haber probado todas las posibles fallas de dispositivos, ni una terminal interactiva de Windows/macOS. La entrada numérica con signo, decimales y conversión general por líneas se desarrollará después de las interfaces de arreglos mediante punteros.
 
 Las funciones de cálculo admiten las precondiciones documentadas, no cualquier entero arbitrario. La interfaz de estados negativos del lector depende de que las cantidades válidas sean no negativas; no se presenta como una solución general para todas las lecturas. Las aserciones de cálculo no sustituyen las pruebas de lectura ni validan datos externos.
+
+Los arreglos de las unidades 11–13 tienen capacidad fija; la cantidad utilizada se controla de forma independiente. Sus cálculos usan dominios pequeños documentados. No incluyen matrices, tamaños variables ni asignación dinámica. Las funciones que reciben arreglos propios se introducirán al explicar punteros; las llamadas actuales a biblioteca utilizan cadenas locales válidas.
+
+El lector de etiquetas admite solamente la lista documentada de símbolos de un byte y reserva un elemento para el terminador. Rechaza líneas demasiado largas en lugar de aceptar un prefijo. No normaliza Unicode ni impone un límite temporal al consumo; un flujo abierto sin final puede mantenerlo esperando. Los errores de entrada estándar se inyectaron en Ubuntu al inicio de la lectura: no se afirma haber ensayado todas las fallas posibles durante una lectura parcial ni la traducción de CRLF de Windows.
 
 [Inicio del curso](../README.md) · [Fuentes](FUENTES.md).
