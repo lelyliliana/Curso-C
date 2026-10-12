@@ -120,3 +120,15 @@ La entrada de datos se enseñará con validación. El curso no utilizará `gets`
 GitHub permite leer el material en el navegador. Para trabajar con los archivos, la Unidad 00 explica cómo obtener una copia sin requerir conocimientos previos de Git.
 
 **Primer objetivo:** poder decir «sé dónde está mi archivo, con qué comando lo compilo, qué archivo se genera y cómo verifico su resultado».
+
+---
+
+### ¿Necesitas acompañamiento personalizado?
+
+Puedes estudiar este curso por tu cuenta. Si necesitas apoyo para configurar el entorno, comprender o resolver un error, o aplicar lo aprendido a tu tesis o proyecto, podemos trabajarlo en una sesión individual.
+
+- **Preparar el entorno:** revisar la instalación y configuración de herramientas y dependencias.
+- **Comprender y resolver errores:** analizar lo que ocurre y trabajar en una solución.
+- **Aplicarlo a tu proyecto:** te acompaño a comprender el contenido y adaptarlo a tu caso.
+
+[**Solicitar asesoría sobre este curso**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20revisando%20el%20curso%20de%20C%20desde%20cero%20(lelyliliana%2FCurso-C)%20y%20me%20interesa%20una%20asesor%C3%ADa%20personalizada.%20Necesito%20apoyo%20con%E2%80%A6)
