@@ -121,3 +121,11 @@ Los códigos de dominio y archivo son enums diferentes. El contexto del mensaje 
 Las pruebas del dominio siguen en la Unidad 23. Las de persistencia ejercitan su módulo compartido; las de sesión contrastan entradas completas y mensajes. Tener una prueba de archivo exitosa no demuestra por sí solo que todas las opciones del menú estén bien conectadas.
 
 Resuelve [EJERCICIOS.md](EJERCICIOS.md) y consulta [SOLUCIONES.md](SOLUCIONES.md). La siguiente unidad añadirá una construcción reproducible y una entrega revisable.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2024%20%C2%B7%20Aplicaci%C3%B3n%20y%20persistencia%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad24-aplicacion%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

@@ -201,3 +201,11 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md); consulta después [SOLUCIONES.md](SOLUC
 - [ ] Compruebo dominio y capacidad antes de publicar un resultado.
 
 Conserva una tabla de acumulación y al menos tres casos adicionales del informe. En la [Unidad 13](../unidad13-cadenas/README.md) estudiarás cómo un arreglo de `char` representa texto y por qué necesita espacio para un terminador.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2012%20%C2%B7%20Recorridos%20de%20colecciones%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad12-recorridos%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

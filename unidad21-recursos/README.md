@@ -132,3 +132,11 @@ Repetir la función de liberación de un catálogo que ya quedó vacío es váli
 - [ ] Libero temporales sin destruir un destino todavía válido.
 
 La [Unidad 22](../unidad22-depuracion/README.md) comprobará hipótesis con pruebas, seguimiento de variables y herramientas de depuración.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2021%20%C2%B7%20Propiedad%20y%20limpieza%20de%20recursos%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad21-recursos%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

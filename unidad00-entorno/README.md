@@ -153,3 +153,11 @@ Después realiza estas acciones: abre tu carpeta, guarda `hola.c`, verifica la v
 Si algo falla, anota el sistema operativo, la terminal utilizada, el comando exacto y su respuesta. Esa información es más útil que «no funciona».
 
 [Continúa con la Unidad 01](../unidad01-primer-programa/README.md).
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2000%20%C2%B7%20Preparar%20el%20entorno%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad00-entorno%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

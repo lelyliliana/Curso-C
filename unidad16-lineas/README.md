@@ -211,3 +211,11 @@ Los pasos de construcción y los resultados están en [SOLUCIONES.md](SOLUCIONES
 - [ ] Conservo resultados ante rechazo y no acepto una colección incompleta.
 
 Conserva casos de entero negativo, límite válido, sufijo inválido, línea larga y fin incompleto. Continúa con la [Unidad 17 — Estructuras](../unidad17-estructuras/README.md) para agrupar y validar registros; después trabajarás estados y archivos. La memoria dinámica tendrá su propia explicación y comprobaciones posteriores.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2016%20%C2%B7%20Leer%20l%C3%ADneas%20y%20convertir%20n%C3%BAmeros%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad16-lineas%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

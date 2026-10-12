@@ -97,3 +97,11 @@ Si usas asistencia automatizada durante tu trabajo, explica las partes que revis
 Conserva una limitación concreta junto con una propuesta: por ejemplo, «guardado exclusivo, sin reemplazo atómico; una ampliación deberá diseñar y verificar recuperación ante fallos». Decir «el programa es perfecto» no es una evaluación técnica.
 
 El curso introductorio llega hasta una aplicación modular con entrada validada, datos dinámicos, archivos y pruebas. C++ es un recorrido diferente; haber aprendido C no exige mezclar clases, `new` o compilación con `g++` dentro de este proyecto.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2025%20%C2%B7%20GNU%20make%20y%20entrega%20final%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad25-construccion%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

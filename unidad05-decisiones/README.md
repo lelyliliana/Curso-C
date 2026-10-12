@@ -187,3 +187,11 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md) y después compara con [SOLUCIONES.md](S
 - [ ] Distingo `break` dentro de `switch` y `return` desde `main`.
 
 Continúa con [Unidad 06 — Ciclos](../unidad06-ciclos/README.md).
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2005%20%C2%B7%20Decisiones%20y%20validaci%C3%B3n%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad05-decisiones%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

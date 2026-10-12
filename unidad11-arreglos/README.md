@@ -174,3 +174,11 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md) antes de abrir [SOLUCIONES.md](SOLUCIONE
 - [ ] Copio elementos a un destino con capacidad suficiente.
 
 Conserva una tabla de seguimiento de índices y una captura de la inserción rechazada por falta de espacio. En la [Unidad 12](../unidad12-recorridos/README.md) usarás esas mismas reglas para resolver problemas con colecciones.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2011%20%C2%B7%20Arreglos%20y%20capacidad%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad11-arreglos%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

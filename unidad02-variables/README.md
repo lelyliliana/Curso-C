@@ -210,3 +210,11 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md), después consulta [SOLUCIONES.md](SOLUC
 - [ ] Inicializo antes de leer y uso `const` cuando corresponde.
 
 Cuando puedas explicar el ejemplo de las copias sin ejecutarlo, continúa con [Unidad 03 — Tipos de datos](../unidad03-tipos/README.md).
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2002%20%C2%B7%20Variables%20y%20constantes%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad02-variables%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

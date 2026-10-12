@@ -177,3 +177,11 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md) y compara con [SOLUCIONES.md](SOLUCIONES
 - [ ] Compruebo que las llamadas repetidas no dependen de estado oculto.
 
 Continúa con [Unidad 09 — Contratos y responsabilidades](../unidad09-contratos/README.md).
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2008%20%C2%B7%20Funciones%20y%20alcance%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad08-funciones%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

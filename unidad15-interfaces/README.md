@@ -152,3 +152,11 @@ Resuelve [EJERCICIOS.md](EJERCICIOS.md) y después consulta [SOLUCIONES.md](SOLU
 - [ ] Pruebo la implementación enlazada por la aplicación.
 
 Conserva una prueba de rechazo con salida intacta. En la [Unidad 16](../unidad16-lineas/README.md) crearás un lector compartido que llena un arreglo de texto del llamador y separa lectura de conversión numérica.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2015%20%C2%B7%20Interfaces%20de%20arreglos%20y%20cadenas%20del%20curso%20C%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-C%2Ftree%2Fmain%2Funidad15-interfaces%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)
